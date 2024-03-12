@@ -1,0 +1,130 @@
+.orderContainer{
+    padding: 50px;
+    display: flex;
+}
+
+.orderLeft{
+    flex: 2;
+
+}
+
+.orderRight{
+    flex: 1;
+
+}
+.orderTable{
+    width: 100%;
+    text-align: left;
+    margin-bottom: 50px;
+}
+.orderRow:last-child{
+    width: 80%;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+}
+
+.statusRow{
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    
+
+}
+.statusRow img{
+    width: 30px;
+    height: 30px;
+}
+.statusRow img:last-child{
+    width: 20px;
+    height: 20px;
+}
+
+
+.done{
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    
+
+}
+
+.done img{
+    width: 30px;
+    height: 30px;
+}
+
+.done img:last-child{
+    width: 20px;
+    height: 20px;
+}
+
+.processing{
+    display: flex;
+    flex-direction: column;
+    align-items: center; 
+    animation: inprogress 1s ease infinite alternate; 
+}
+
+@keyframes inprogress {
+    from{
+        opacity: 0;
+    }
+    to {
+        opacity: 1;
+    }
+}
+
+.processing img{
+    width: 30px;
+    height: 30px;
+}
+
+.processing img:last-child{
+    width: 20px;
+    height: 20px;
+}
+.undone{
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    opacity: 0.3;
+}
+
+.undone img{
+    width: 30px;
+    height: 30px;
+}
+
+.undone img:last-child{
+    width: 20px;
+    height: 20px;
+}
+
+.undone .checkedIcon,.processing .checkedIcon{
+    display:none;
+}
+
+
+.orderWraaperRight{
+    width: 80%;
+    min-height: 300px;
+    background-color: #333;
+    padding: 50px;
+    padding-top: 10px;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+    color: white;
+}
+.orderSubtotal{
+    margin-right: 10px;
+}
+.buttonOrder{
+    height: 30px;
+    color: #d1411e;
+    background-color: white;
+    font-weight: bold;
+    cursor: not-allowed;
+    margin-top: 20px;
+}

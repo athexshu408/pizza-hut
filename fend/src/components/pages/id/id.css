@@ -1,0 +1,114 @@
+.pContainer {
+  height: calc(100vh - 100px);
+  display: flex;
+}
+.leftContainer {
+  flex: 1;
+  height: 100%;
+  align-items: center;
+  justify-content: center;
+}
+.rightContainer {
+  flex: 1;
+  padding: 40px;
+}
+
+
+.imgContainerId {
+  width: 80%;
+  height: 80%;
+  position: relative;
+  object-fit: contain;
+  margin: auto;
+  margin-top: 50px;
+}
+.rcTitle{
+    
+
+}
+.rcPrice{
+    
+    color: #d1411e;
+    font-size: 24px;
+    font-weight: 400;
+     margin-top: 20px!important;
+    border-bottom: 1px solid #d1411e;
+}
+.rcDesc{
+     margin: 20px 0;
+}
+.pizzaSize{
+    
+    height: 30px;
+    width: 30px;
+    position: relative;
+
+    
+}
+.pizzaSize:nth-child(2){
+    height: 40px;
+    width: 40px;
+}
+.pizzaSize:last-child{
+    height: 50px;
+    width: 50px;
+}
+.pizzaSize img{
+    width: 100%;
+    height: 100%;
+} 
+.pizzaSizes{
+    display: flex;
+    margin-top: 20px;
+    justify-content: space-between;
+    width: 40%;
+    cursor: pointer;
+    position: relative;
+}
+.pizzzanumber{
+    position: absolute;
+    top: -5px;
+    background-color: teal;
+    color: white;
+    font-size: 12px;
+    padding: 0 5px;
+    border-radius: 10px;
+}
+.pizzaaBase,.pizzaCheese,.pizzaSauce,.pizzaVeggies{
+    display: flex;
+    margin: 5px 0;
+    
+
+    margin-bottom: 10;
+}
+
+.bseOption,.sauceOption,.cheeseOption,.veggiesOption{
+    display: flex;
+    align-items: center;
+    margin-right: 10px;
+    font-size: 14px;
+    font-weight: 400;
+
+}
+.sauceRadio,.veggiesRadio,.cheeseRadio,.baseCheckbox{
+    width: 15px;
+    height: 15px;
+    margin-right: 5px;
+    cursor: pointer;
+    
+}
+.quantityCount{
+width: 50px;
+height: 30px;
+} 
+.addButton{
+    height: 30px;
+    margin-left: 10px;
+    background-color: #d1411e;
+    color: white;
+    border: none;
+    cursor: pointer;
+}
+.addPizza{
+    margin-top: 10px;
+}

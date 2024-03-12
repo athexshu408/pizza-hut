@@ -1,0 +1,42 @@
+.featureContainer {
+  height: calc(100vh - 100px);
+  width: 100%;
+  background-color: #d1411e;
+  overflow: hidden;
+}
+.arrowContainer {
+  position: absolute;
+  width: 10%;
+  height: 10%;
+
+  top: 0;
+  bottom: 0;
+  margin: auto;
+  cursor: pointer;
+  z-index: 999;
+}
+.arrowContainer img {
+  height: 100px;
+}
+.arrowContainer img:last-child{
+    margin-left: 20px;
+}
+.featureWrapper {
+  width: 600vw;
+  height: 100%;
+  display: flex;
+  
+  transition: all 1.5s ease-in-out;
+}
+.imgContainer {
+  width: 100vw;
+  height: 100%;
+  position: relative;
+}
+
+.imgContainer img {
+  position: absolute;
+  width: 100%;
+  height: 100%;
+  object-fit: cover; /* or contain, depending on your requirement */
+}

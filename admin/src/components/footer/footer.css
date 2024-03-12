@@ -1,0 +1,31 @@
+.footerContainer{
+  height: calc(100vh - 100px);
+  background-color: #222;
+  display: flex;
+}
+.footeritem{
+  flex: 1;
+  position: relative;
+  display: flex;
+}
+.footeritem:last-child{
+  flex: 2;
+  padding: 50px;
+  justify-content: space-between;
+}
+.footerCard{
+  flex: 1;
+  
+}
+.footerMotto{
+  color: rgb(211, 211, 211);
+}
+.cardtitle{
+  font-size: 18px;
+  color: #b7903c;
+}
+.cardText{
+  color: lightgray;
+  padding-top: 20px;
+  
+}

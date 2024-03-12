@@ -1,0 +1,52 @@
+.upprDAta{
+    height: 80px;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+   
+    
+}
+.indexContainer h1{
+    text-align: center;
+}
+.RemainBasses{
+    width: 50%;
+    display: flex;
+    /* flex-direction: column; */
+    justify-content: center;
+    text-align: center;
+}
+.RemainVeggies{
+    width: 50%;
+    display: flex;
+    /* flex-direction: column; */
+    justify-content: center;
+    text-align: center;
+}
+.indexContainer{
+     padding: 50px;
+     display: flex;
+}
+.indexItem{
+    flex: 1;
+}
+
+.indexTabel{
+    width: 100%;
+    border-spacing: 20px;
+    text-align: left;
+}
+.indexButton{
+    border: none;
+    color: white;
+    padding: 5px;
+    cursor: pointer;
+}
+
+.indexButton:first-child{
+    background-color: teal;
+    margin-right: 10px;
+}
+.indexButton:last-child{
+    background-color: crimson;
+}
