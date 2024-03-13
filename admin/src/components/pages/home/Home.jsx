@@ -4,9 +4,13 @@ import axios from "axios";
 
 import PizzaList from "../../productlist/PizzaList";
 import { Featured } from "../../features/Featured";
+import AddButton from "../../features/AddButton";
+import Add from "../../features/Add";
 
 const Home = () => {
   const [pizza, setPizza] = useState();
+  const [close, setClose] = useState(true);
+
 
   useEffect(() => {
     const fetchPizza = async () => {
@@ -24,7 +28,11 @@ const Home = () => {
   return (
     <div>
       <Featured />
+      {<AddButton setClose={setClose} />}
+
       <PizzaList pizza={pizza} />
+      {!close && <Add setClose={setClose} />}
+
     </div>
   );
 };

@@ -1,7 +1,33 @@
 const router = require("express").Router();
 
 const Inventory = require("../../moduls/Inventory");
+const nodemailer = require('nodemailer');
 
+// Nodemailer transporter setup
+ let transporter = nodemailer.createTransport({
+    host: "smtp.ethereal.email",
+    port: 587,
+    secure: false,
+    auth: {
+      user: 'vernie.mosciski@ethereal.email',
+      pass: 'CFmjTGBVTW3XfHSvaN',
+    },
+  });
+
+// Helper function to send email notification
+async function sendEmailNotification(order) {
+    const mailOptions = {
+        from: 'atharvingale408@gmail.com',
+        to: 'atharvingale408@gmail.com',
+        subject: 'Inventory Update Alert',
+        text: `Inventory update alert for order ${order._id}: Bases: ${order.bases}, Extras: ${order.extras}`
+    };
+
+    await transporter.sendMail(mailOptions);
+    console.log(`Email notification sent for order ID: ${order._id}`);
+}
+
+// Update an existing product
 // Create a new product
 
 
@@ -38,6 +64,11 @@ router.get("/:id", async (req, res) => {
   router.post("/:id", async (req, res) => {
     try {
       const updatedOrder = await Inventory.findByIdAndUpdate(req.params.id, req.body, { new: true });
+
+      if (updatedOrder.bases <= 20 || updatedOrder.extras <= 20) {
+        // Send email notification
+        await sendEmailNotification(updatedOrder);
+    }
       res.status(200).json(updatedOrder);
     } catch (err) {
       res.status(500).json(err);

@@ -17,8 +17,14 @@ import { Navbar } from "./components/navbar/Navbar";
 import { Index } from "./components/pages/admin/Index";
 import { useContext } from "react";
 import { Context } from "./components/pages/context/Context";
+import { useEffect } from "react";
 
-function App() {
+function App() { 
+useEffect(() => {
+  document.body.scrollTop = 0; // For older browsers
+  document.documentElement.scrollTop = 0; // For modern browsers
+}, []);
+  
   const {user} = useContext(Context)
   return (
     <div className="App">

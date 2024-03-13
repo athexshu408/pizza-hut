@@ -4,10 +4,10 @@ import "./featured.css";
 export const Featured = () => {
     const [index,setIndex] = useState(0)
   const images = [
-    "/img/featured.jpg",
-    "/img/featured2.jpg",
+    "/img/download.png",
     "/img/featured1.jpg",
-    "/img/featured3.jpg",
+    "/img/featured2.png",
+    "/img/featured3.png",
     "/img/featured4.jpg",
     "/img/featured5.jpg",
   ];
